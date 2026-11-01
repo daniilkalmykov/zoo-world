@@ -50,3 +50,5 @@ MonoBehaviour:
   autoInjectGameObjects: []
   _uiPrefab: {fileID: 7388258401264197889, guid: 0eba907d7c38249f59f05490a3020cab, type: 3}
   _worldPrefab: {fileID: 7328429440501701594, guid: 58cdc7c7716a547b19d06edc020e0261, type: 3}
+  _animalsCatalog: {fileID: 11400000, guid: 39de870f3145746c08d16e6888e8c4c0, type: 2}
+  _animalsFactoryConfig: {fileID: 11400000, guid: f318937f45e0c449f80e9aa1647c5922, type: 2}

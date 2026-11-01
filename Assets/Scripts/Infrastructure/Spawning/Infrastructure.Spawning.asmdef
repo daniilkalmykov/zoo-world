@@ -1,0 +1,4 @@
+{
+  "name": "Infrastructure.Spawning",
+  "references":[ "GUID:aca724327c014ce5ae40ff0b3a7d7929", "GUID:a51c1bbe984a4b6c95966326ab306e29", "GUID:62411c9c072041a0934e9299c870e319" ]
+}

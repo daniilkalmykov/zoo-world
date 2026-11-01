@@ -2,7 +2,9 @@
     "name": "Repositories",
     "rootNamespace": "",
     "references": [
-        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:7c0212366e3d49d487a22d4bd62b291b",
+        "GUID:4e3e365fbc5a4fb0824056ba28151bb5"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

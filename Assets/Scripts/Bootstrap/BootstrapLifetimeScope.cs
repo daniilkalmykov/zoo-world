@@ -1,3 +1,4 @@
+using Infrastructure.Random;
 using Infrastructure.SceneManagement;
 using Repositories.ScenesManagement;
 using UnityEngine;
@@ -17,7 +18,8 @@ namespace Bootstrap
             builder.RegisterInstance<IScenesRepository>(_scenesRepository);
 
             builder.Register<ISceneLoader, SceneLoader>(Lifetime.Singleton);
-            
+            builder.Register<IRandomSource, UnityRandomSource>(Lifetime.Singleton);
+
             builder.RegisterEntryPoint<BootstrapEntryPoint>();
 
             builder.RegisterEntryPointExceptionHandler(Debug.LogException);

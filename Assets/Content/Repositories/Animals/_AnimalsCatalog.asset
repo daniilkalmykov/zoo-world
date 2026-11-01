@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b25b6333604799841ed394be49a6b9, type: 3}
+  m_Name: _AnimalsCatalog
+  m_EditorClassIdentifier: Repositories::Repositories.Animals.AnimalsCatalog
+  _animalRepositories:
+  - {fileID: 11400000, guid: 3a2e7fa565a62456e8c44e0dbcd55772, type: 2}
+  - {fileID: 11400000, guid: d3b8f62ed248043adb16e55356b64ce9, type: 2}
+  - {fileID: 11400000, guid: 1449cac4546d945eead5e24721a9ce67, type: 2}
+  - {fileID: 11400000, guid: 131e48aa45b744d98ad279d7f8eb8e38, type: 2}

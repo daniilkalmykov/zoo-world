@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-namespace Bootstrap.Roots
+namespace Roots
 {
-    internal sealed class GameUIRoot : MonoBehaviour 
+    public sealed class GameUIRoot : MonoBehaviour 
     {
         [SerializeField] private Canvas _canvas;
 
