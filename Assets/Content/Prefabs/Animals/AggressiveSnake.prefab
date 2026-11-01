@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6019253275718887684}
   - component: {fileID: 707617733343675716}
   - component: {fileID: 5070611977276486652}
+  - component: {fileID: 161746053782108745}
+  - component: {fileID: 1151623364297153061}
   m_Layer: 0
   m_Name: AggressiveSnake
   m_TagString: Untagged
@@ -125,3 +127,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df57ed2cb4414984af2985f87f4060fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Presentation.Views::Presentation.Views.Animals.DefaultAnimalView
+--- !u!54 &161746053782108745
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937296440688777918}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 1
+--- !u!114 &1151623364297153061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937296440688777918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51dc4d3eb2184143b1c094fe61ebb968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Presentation.Controllers::Presentation.Controllers.Animals.AnimalMovementController
+  _rigidbody: {fileID: 161746053782108745}

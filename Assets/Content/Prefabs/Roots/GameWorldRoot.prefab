@@ -137,6 +137,37 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &1377664406242637701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7463946574874638589}
+  m_Layer: 0
+  m_Name: AnimalsContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7463946574874638589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377664406242637701}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.78572, y: 0, z: -11.78572}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2084341325416696368}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2272856859992201114
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +251,7 @@ Transform:
   - {fileID: 4516816534644474137}
   - {fileID: 4515613656283518218}
   - {fileID: 6003923809349194770}
+  - {fileID: 7463946574874638589}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7328429440501701594
@@ -235,6 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bootstrap.Roots.GameWorldRoot
   _camera: {fileID: 1871633837039703172}
+  _animalsRoot: {fileID: 7463946574874638589}
 --- !u!1 &7965776872855369911
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +280,7 @@ GameObject:
   - component: {fileID: 2301719952725462035}
   - component: {fileID: 5466974480796786997}
   - component: {fileID: 2427453555181948372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

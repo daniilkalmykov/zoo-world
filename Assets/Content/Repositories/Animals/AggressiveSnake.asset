@@ -15,3 +15,4 @@ MonoBehaviour:
   <Id>k__BackingField: 11
   <Type>k__BackingField: 10
   <Prefab>k__BackingField: {fileID: 5070611977276486652, guid: dd2f05d2fd3dd4a9793aea35ce570d9e, type: 3}
+  <MovementConfig>k__BackingField: {fileID: 11400000, guid: 8a3be6eba8f5b49bba50979eb6c702bf, type: 2}

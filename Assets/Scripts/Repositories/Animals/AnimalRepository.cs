@@ -1,5 +1,6 @@
 using Domain.Animals;
 using Presentation.Views.Animals;
+using Repositories.Movement;
 using UnityEngine;
 
 namespace Repositories.Animals
@@ -10,5 +11,6 @@ namespace Repositories.Animals
         [field: SerializeField] public AnimalId Id { get; private set; }
         [field: SerializeField] public AnimalType Type { get; private set; }
         [field: SerializeField] public AnimalView Prefab { get; private set; }
+        [field: SerializeField] public MovementConfig MovementConfig { get; private set; }
     }
 }

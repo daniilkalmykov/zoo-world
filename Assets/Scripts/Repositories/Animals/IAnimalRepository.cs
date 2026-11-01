@@ -1,5 +1,6 @@
 using Domain.Animals;
 using Presentation.Views.Animals;
+using Repositories.Movement;
 
 namespace Repositories.Animals
 {
@@ -8,5 +9,6 @@ namespace Repositories.Animals
         public AnimalId Id { get; }
         public AnimalType Type { get; }
         public AnimalView Prefab { get; }
+        public MovementConfig MovementConfig { get; }
     }
 }

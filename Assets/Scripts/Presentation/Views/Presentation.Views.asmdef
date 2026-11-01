@@ -1,4 +1,4 @@
 {
   "name": "Presentation.Views",
-  "references":[ "GUID:7c0212366e3d49d487a22d4bd62b291b" ]
+  "references":[ "GUID:7c0212366e3d49d487a22d4bd62b291b", "GUID:345bb3365726429a9778027dcd97c8fe", "GUID:6d8647bae22e47058505a3643e481b7a" ]
 }

@@ -19,9 +19,7 @@ namespace Bootstrap
         {
             try
             {
-                await _sceneLoader.LoadAsync(
-                    SceneNames.Game,
-                    cancellationToken);
+                await _sceneLoader.LoadAsync(SceneNames.Game, cancellationToken);
             }
             catch (OperationCanceledException)
                 when (cancellationToken.IsCancellationRequested)
