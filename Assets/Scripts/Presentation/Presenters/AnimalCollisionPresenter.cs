@@ -5,7 +5,6 @@ using Infrastructure.Factories.Animals;
 using Presentation.Controllers.Animals;
 using Presentation.Views.Animals;
 using UseCases.Animals;
-using VContainer;
 using VContainer.Unity;
 
 [assembly: InternalsVisibleTo("Assembly-CSharp")]
@@ -13,17 +12,23 @@ namespace Presentation.Presenters
 {
     internal sealed class AnimalCollisionPresenter : IDisposable, IStartable
     {
+        private readonly TastyLabelPresenter _tastyPresenter;
         private readonly IResolveAnimalsCollisionUseCase _resolveAnimalsCollisionUseCase;
         private readonly IAnimalFactory _animalsFactory;
 
         public AnimalCollisionPresenter(IAnimalFactory animalsFactory,
-            IResolveAnimalsCollisionUseCase resolveAnimalsCollisionUseCase)
+            IResolveAnimalsCollisionUseCase resolveAnimalsCollisionUseCase, TastyLabelPresenter tastyPresenter)
         {
             _animalsFactory = animalsFactory;
             _resolveAnimalsCollisionUseCase = resolveAnimalsCollisionUseCase;
-
+            _tastyPresenter = tastyPresenter;
         }
-
+        
+        public void Start()
+        {
+            _animalsFactory.ControllerCreated += OnControllerCreated;
+        }
+        
         public void Dispose()
         {
             _animalsFactory.ControllerCreated -= OnControllerCreated;
@@ -49,14 +54,10 @@ namespace Presentation.Presenters
             var victimView = ReferenceEquals(first.Model, result.Victim) ? first : second;
             var winnerView = ReferenceEquals(first.Model, result.Winner) ? first : second;
 
+            _tastyPresenter.Show(winnerView.transform);
 
             victimView.Die();
         }
 
-        public void Start()
-        {
-            _animalsFactory.ControllerCreated += OnControllerCreated;
-            
-        }
     }
 }

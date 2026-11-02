@@ -21,21 +21,26 @@ namespace Bootstrap
 
         protected override void Configure(IContainerBuilder builder)
         {
+            IDeathList<AnimalType> deathList = new AnimalsDeathList();
+            deathList.InitializeTypes(new[] { AnimalType.Prey, AnimalType.Predator });
+            
             builder.RegisterComponentInNewPrefab(_uiPrefab, Lifetime.Scoped).UnderTransform(transform);
             builder.RegisterComponentInNewPrefab(_worldPrefab, Lifetime.Scoped).UnderTransform(transform);
             
             builder.RegisterInstance<IAnimalsCatalog>(_animalsCatalog);
             builder.RegisterInstance<IAnimalsFactoryConfig>(_animalsFactoryConfig);
+            builder.RegisterInstance(deathList);
 
             builder.Register<IAnimalFactory, AnimalFactory>(Lifetime.Scoped);
             builder.Register<ISpawningPositionProvider, CameraSpawningPositionProvider>(Lifetime.Scoped);
             builder.Register<IResolveAnimalsCollisionUseCase, ResolveAnimalsCollisionUseCase>(Lifetime.Scoped);
-            builder.Register<IDeathList<AnimalType>, AnimalsDeathList>(Lifetime.Scoped);
+
+            builder.Register<TastyLabelPresenter>(Lifetime.Scoped);
 
             builder.RegisterEntryPoint<GameSceneEntryPoint>(Lifetime.Scoped);
             builder.RegisterEntryPoint<SpawnAnimalUseCase>(Lifetime.Scoped);
             builder.RegisterEntryPoint<AnimalCollisionPresenter>(Lifetime.Scoped);
-            
+            builder.RegisterEntryPoint<DeathCounterPresenter>(Lifetime.Scoped);
         }
     }
 }

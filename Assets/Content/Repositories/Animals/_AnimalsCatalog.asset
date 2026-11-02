@@ -15,5 +15,5 @@ MonoBehaviour:
   _animalRepositories:
   - {fileID: 11400000, guid: 3a2e7fa565a62456e8c44e0dbcd55772, type: 2}
   - {fileID: 11400000, guid: d3b8f62ed248043adb16e55356b64ce9, type: 2}
-  - {fileID: 11400000, guid: 1449cac4546d945eead5e24721a9ce67, type: 2}
   - {fileID: 11400000, guid: 131e48aa45b744d98ad279d7f8eb8e38, type: 2}
+  - {fileID: 11400000, guid: 1449cac4546d945eead5e24721a9ce67, type: 2}

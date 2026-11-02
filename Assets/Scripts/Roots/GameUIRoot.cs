@@ -1,4 +1,6 @@
 using System;
+using Presentation.Views;
+using TMPro;
 using UnityEngine;
 
 namespace Roots
@@ -6,8 +8,16 @@ namespace Roots
     public sealed class GameUIRoot : MonoBehaviour 
     {
         [SerializeField] private Canvas _canvas;
+        [SerializeField] private DeathCounterView _deathCounterView;
+        [SerializeField] private RectTransform _floatingLabelsRoot;
+        [SerializeField] private TMP_Text _tastyLabelPrefab;
 
+        public RectTransform FloatingLabelsRoot => _floatingLabelsRoot;
+
+        public TMP_Text TastyLabelPrefab => _tastyLabelPrefab;
+        
         public Canvas Canvas => _canvas;
+        public IDeathCounterView DeathCounterView => _deathCounterView;
 
         public void Initialize(Camera camera)
         {
