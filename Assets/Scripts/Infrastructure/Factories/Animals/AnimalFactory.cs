@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using Domain.Animals;
+using Domain.Interfaces;
+using Domain.Models.Animals;
 using Infrastructure.Random;
 using Presentation.Controllers.Animals;
 using Presentation.Views.Animals;
+using Presentation.Views.Decorator;
 using Repositories.Animals;
 using Roots;
 using UnityEngine;
@@ -28,17 +30,18 @@ namespace Infrastructure.Factories.Animals
             IObjectResolver resolver,
             IAnimalsCatalog catalog,
             GameWorldRoot world,
-            GameWorldRoot root,
             IRandomSource random,
             IAnimalsFactoryConfig spawnSettings)
         {
             _resolver = resolver;
             _catalog = catalog;
             _world = world;
-            _camera = root.Camera;
+            _camera = world.Camera;
             _random = random;
             _spawnSettings = spawnSettings;
         }
+
+        public event Action<IAnimalCollisionController> ControllerCreated;
 
         public void Create(AnimalId id, Vector3 position)
         {
@@ -57,25 +60,32 @@ namespace Infrastructure.Factories.Animals
             {
                 if (instance.TryGetComponent<AnimalView>(out var view) == false)
                 {
-                    throw new InvalidOperationException(
-                        $"Prefab '{id}' has no AnimalView.");
+                    throw new InvalidOperationException($"Prefab '{id}' has no AnimalView.");
                 }
 
                 if (instance.TryGetComponent(out AnimalMovementController movement) == false)
                 {
-                    throw new InvalidOperationException(
-                        $"Prefab '{id}' has no movement controller.");
+                    throw new InvalidOperationException($"Prefab '{id}' has no movement controller.");
+                }
+                
+                if (instance.TryGetComponent(out IColliderDecoratorView colliderDecoratorView) == false)
+                {
+                    throw new InvalidOperationException($"Prefab '{id}' has no collider decorator view.");
                 }
 
-                view.Initialize(animalRepository.Id, animalRepository.Type);
+                var animalCollisionController = new AnimalCollisionController(view, colliderDecoratorView);
+                
+                ControllerCreated?.Invoke(animalCollisionController);
+                
+                IAnimal animal = new Animal(animalRepository.Type, animalRepository.Id, Guid.NewGuid());
 
+                view.Initialize(animal);
                 movement.Initialize(animalRepository.MovementConfig, _camera, _random, _spawnSettings);
             }
             catch
             {
                 UnityEngine.Object.Destroy(instance);
-                
-                throw new InvalidOperationException("Failed to initialize animal instance.");
+                throw;
             }
         }
     }

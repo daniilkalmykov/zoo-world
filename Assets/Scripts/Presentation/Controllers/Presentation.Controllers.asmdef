@@ -1,4 +1,22 @@
 {
-  "name": "Presentation.Controllers",
-  "references":[ "GUID:345bb3365726429a9778027dcd97c8fe", "GUID:6d8647bae22e47058505a3643e481b7a", "GUID:aca724327c014ce5ae40ff0b3a7d7929", "GUID:62411c9c072041a0934e9299c870e319" ]
+    "name": "Presentation.Controllers",
+    "rootNamespace": "",
+    "references": [
+        "GUID:345bb3365726429a9778027dcd97c8fe",
+        "GUID:6d8647bae22e47058505a3643e481b7a",
+        "GUID:aca724327c014ce5ae40ff0b3a7d7929",
+        "GUID:62411c9c072041a0934e9299c870e319",
+        "GUID:4e3e365fbc5a4fb0824056ba28151bb5",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:7c0212366e3d49d487a22d4bd62b291b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

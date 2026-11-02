@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Domain.Animals;
 
 namespace Repositories.Animals
 {

@@ -1,4 +1,4 @@
-namespace Domain.Animals
+namespace Domain.Models.Animals
 {
     public enum AnimalId
     {

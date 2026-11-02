@@ -1,4 +1,4 @@
-using Domain.Animals;
+using Domain.Models.Animals;
 using Presentation.Views.Animals;
 using Repositories.Movement;
 using UnityEngine;

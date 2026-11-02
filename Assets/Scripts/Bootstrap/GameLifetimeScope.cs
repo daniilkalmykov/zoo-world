@@ -1,5 +1,8 @@
+using Domain.Interfaces;
+using Domain.Models.Animals;
 using Infrastructure.Factories.Animals;
 using Infrastructure.Spawning;
+using Presentation.Presenters;
 using Repositories.Animals;
 using Roots;
 using UnityEngine;
@@ -26,9 +29,13 @@ namespace Bootstrap
 
             builder.Register<IAnimalFactory, AnimalFactory>(Lifetime.Scoped);
             builder.Register<ISpawningPositionProvider, CameraSpawningPositionProvider>(Lifetime.Scoped);
+            builder.Register<IResolveAnimalsCollisionUseCase, ResolveAnimalsCollisionUseCase>(Lifetime.Scoped);
+            builder.Register<IDeathList<AnimalType>, AnimalsDeathList>(Lifetime.Scoped);
 
-            builder.RegisterEntryPoint<GameSceneEntryPoint>();
+            builder.RegisterEntryPoint<GameSceneEntryPoint>(Lifetime.Scoped);
             builder.RegisterEntryPoint<SpawnAnimalUseCase>(Lifetime.Scoped);
+            builder.RegisterEntryPoint<AnimalCollisionPresenter>(Lifetime.Scoped);
+            
         }
     }
 }

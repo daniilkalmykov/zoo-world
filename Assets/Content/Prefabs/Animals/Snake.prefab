@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4349908850816270004}
   - component: {fileID: 3675462471473294465}
   - component: {fileID: -6792901021618685395}
+  - component: {fileID: -3763653055431890929}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df57ed2cb4414984af2985f87f4060fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Presentation.Views::Presentation.Views.Animals.DefaultAnimalView
+  _collider: {fileID: 5560818153593848597}
 --- !u!54 &3675462471473294465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -167,3 +169,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Presentation.Controllers::Presentation.Controllers.Animals.AnimalMovementController
   _rigidbody: {fileID: 3675462471473294465}
+--- !u!114 &-3763653055431890929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773248477176184886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc524ab511e48c3984bec2c5c2cdcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Presentation.Views::Presentation.Views.Decorator.ColliderDecoratorView

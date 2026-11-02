@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5070611977276486652}
   - component: {fileID: 161746053782108745}
   - component: {fileID: 1151623364297153061}
+  - component: {fileID: -527642154315568561}
   m_Layer: 0
   m_Name: AggressiveSnake
   m_TagString: Untagged
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df57ed2cb4414984af2985f87f4060fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Presentation.Views::Presentation.Views.Animals.DefaultAnimalView
+  _collider: {fileID: 7573358681272925329, guid: f1a3d858dfbd54dd0aa1cb61e1cb3ce4, type: 3}
 --- !u!54 &161746053782108745
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -167,3 +169,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Presentation.Controllers::Presentation.Controllers.Animals.AnimalMovementController
   _rigidbody: {fileID: 161746053782108745}
+--- !u!114 &-527642154315568561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937296440688777918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc524ab511e48c3984bec2c5c2cdcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Presentation.Views::Presentation.Views.Decorator.ColliderDecoratorView

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1582799970204302318}
   - component: {fileID: -2530457549228301469}
   - component: {fileID: -23623179985204818}
+  - component: {fileID: -596828412597909251}
   m_Layer: 0
   m_Name: AggressiveFrog
   m_TagString: Untagged
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df57ed2cb4414984af2985f87f4060fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Presentation.Views::Presentation.Views.Animals.DefaultAnimalView
+  _collider: {fileID: 7573358681272925329}
 --- !u!54 &-2530457549228301469
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -167,3 +169,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Presentation.Controllers::Presentation.Controllers.Animals.AnimalMovementController
   _rigidbody: {fileID: -2530457549228301469}
+--- !u!114 &-596828412597909251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030847566755351861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc524ab511e48c3984bec2c5c2cdcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Presentation.Views::Presentation.Views.Decorator.ColliderDecoratorView
